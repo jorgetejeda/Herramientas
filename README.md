@@ -21,3 +21,10 @@ Mi objetivo es crear una clase la cual contenga varios metodos utiles los cuales
 
 **5. cedula**, este método es solamente para Republica Domincana ya que valida mediante una fórmula si la cédula dominicana es valida.
 
+**6. sendMessageJson**, método que devuelve una respuesta por *json*, este fue diseñado para dar varios tipos de respuestas en conjunto con javascript ya sea por error o éxito. La variable *$bool* por defecto *false* hace referencia a que se devolvera un error si fuera *true* se devolvera un error con exito, la variable *$category* fue diseñada para guardar el nivel de alerta del mensaje ya sea que queramos usar el mismo codigo de javascript para hacer diferentes eventos dependiendo de la categoria del mensaje, la variable *$message* es el mensaje que aparecera y por ultimo *$redirect* es donde redirigiremos al usuario. 
+```
+//Mensaje Error
+$var->sendMessageJson(false,"El usuario o la contraseña estan incorrecto.", 1);
+//Mensaje Exito
+$var->sendMessageJson(true,"Bienvenido", 1,"perfil.php");
+```

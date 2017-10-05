@@ -95,7 +95,7 @@ class Tool
         exit;
     }
 
-    function cedula($ced) 
+    function cedula($ced = "") 
     { 
         $c = str_replace("-","", $ced); 
         $cedula = substr($c,0, strlen($c) - 1); 
