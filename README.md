@@ -10,6 +10,14 @@ Mi objetivo es crear una clase la cual contenga varios metodos utiles los cuales
 **2. setCookie**, este método en conjunto con el método **expirationDate()** nos ayuda a establecer el tiempo que durara las *COOKIE*, al cual le pasaremos un arreglo*(array)* con él índice y el valor que tendrá:
 ```
 	$Cookies = array( 'correo'=>'jorge@live.com' , 'contrasena'=>'x1a2s3');
-	$var->crearCookies($Cookies);
+	$var->setCookie($Cookies);
 ```
-**3. expirationDate**, este método nos ayuda a establecer el tiempo que durara las *COOKIE*, solamente debemos pasarle el tiempo que queremos que dure, diario*(daily)*, mensualmente*(monthly)*, anualmente*(anually)*.
+**3. expirationDate**, este método nos ayuda a establecer el tiempo que durara las *COOKIE*, solamente debemos pasarle el tiempo que queremos que dure, diario(daily), mensualmente(monthly), anualmente(anually).
+
+**4. cleanInput**, nos sirve para limpiar nuestro formulario de caracteres especiales. 
+```
+	$var->cleanInput($_POST)
+```
+
+**5. cedula**, este método es solamente para Republica Domincana ya que valida mediante una fórmula si la cédula dominicana es valida.
+
