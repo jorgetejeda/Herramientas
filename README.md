@@ -28,3 +28,14 @@ $var->sendMessageJson(false,"El usuario o la contraseña estan incorrecto.", 1);
 //Mensaje Exito
 $var->sendMessageJson(true,"Bienvenido", 1,"perfil.php");
 ```
+
+**7. extImages**, método que valída la extensiones de las imagenes.
+
+**8. extFiles**, método que valída la extensiones de los archivos.
+
+**9. uploadImages**, estes método es quien sube la foto al servidor, reduce el tamaño de las imagenes al tamaño que le enviamos, tambien nos crear un thumbnail de la misma imagen para crear galerias.
+```
+$var->uploadImages($_FILE, 150, '/img/','/img/thumbnail');
+```
+
+**10. uploadFile**, este método ayuda a subir los archivos al servidor.
