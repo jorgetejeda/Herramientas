@@ -95,37 +95,6 @@ class Tool
         exit;
     }
 
-    function cedula($ced = "") 
-    { 
-        $c = str_replace("-","", $ced); 
-        $cedula = substr($c,0, strlen($c) - 1); 
-        $verify = substr($c,strlen($c) - 1, 1); 
-        $sum = 0; 
-
-        if(strlen($ced) < 13) 
-            return false; 
-
-        for ($i=0; $i < strlen($cedula); $i++) 
-        { 
-            $mod = ""; 
-            $mod = (($i % 2) == 0) ? 1 : 2;
-
-            $rest = substr($cedula,$i,1) * $mod; 
-
-            if ($rest > 9) 
-            { 
-                $uno = substr($rest,0,1); 
-                $dos = substr($rest,1,1); 
-                $rest = $uno + $dos; 
-            } 
-
-            $sum += $rest; 
-        } 
-
-        $the_number = (10 - ($sum % 10)) % 10; 
-
-        return ($the_number == $verify && substr($cedula,0,3) != "000") ? True : False;
-    }
 
     public function extImages($files){
         // Formatos permitidos
