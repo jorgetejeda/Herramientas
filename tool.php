@@ -29,7 +29,7 @@ class Tool
 	 * @param	string 		$tiempo 	El tiempo que duraran las Cookies
 	 * @return	void
 	 */
-    protected function expirationDate($time = "")
+    private function expirationDate($time = "")
     {
     	switch ($time) 
     	{
